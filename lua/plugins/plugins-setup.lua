@@ -14,12 +14,13 @@ vim.cmd([[
     augroup packer_user_config
         autocmd!
         autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
-    autogroup end
+    augroup end
 
 
 ]])
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'folke/tokyonight.nvim'
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
