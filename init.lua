@@ -6,3 +6,8 @@ require("core.options")
 
 -- 更改键盘
 require("core.keymaps")
+
+
+-- 插件
+require("plugins.lualine")
+require("plugins.nvim-tree")
