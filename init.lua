@@ -1,3 +1,6 @@
+-- 引用插件
+require("plugins.plugins-setup")
+
 -- 引用相关操作
 require("core.options")
 
