@@ -17,6 +17,8 @@ vim.keymap.set("n","<leader>sh","<C-w>s") -- 垂直
 vim.keymap.set("n","<leader>nh",":nohl<CR>")
 
 
+-- 打开nvim-tree  主键 + t
+vim.keymap.set("n","<leader>t",":NvimTreeToggle<CR>")
 
 
 
