@@ -35,5 +35,7 @@ global.mapleader = " "
 -- v模式下按KJ能够快速换行
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
+-- 全局粘贴？ 但是我现在弄不好
 vim.keymap.set({ "v", "n" }, "<leader>y", "\"+y")
+
+
