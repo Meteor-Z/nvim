@@ -1,2 +1,4 @@
 vim.loader.enable()
-require ("basic")
+require("basic")
+require("lazy_nvim")
+
