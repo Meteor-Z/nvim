@@ -10,6 +10,20 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-local plugins = {}
-local opts = {}
-require("lazy").setup(plugins, opts)
+
+-- 加入插件
+--local plugins = {
+--    {
+--       "folke/tokyonight.nvim",
+--        config = function()
+--            vim.cmd[[colorscheme tokyonight]]
+--        end
+--    },
+--}
+--- 使用插件
+--local opts = {
+--   install = {
+--        colorscheme = { "tokyonight" },      
+--    }
+--}
+require("lazy").setup("plugins", opts)
