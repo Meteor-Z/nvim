@@ -3,39 +3,35 @@ local buffer = vim.b
 local global = vim.g 
 
 -- Option Settings --
-option.number = true
-option.relativenumber = true
-option.showmode = true
+-- 行号
+vim.opt.relativenumber = true
+vim.opt.number = true
 
+-- 缩进
 option.tabstop = 4
 option.shiftwidth = 4
 option.expandtab = true
+option.autoindent = true
 
-option.hlsearch = true
-option.smartcase = true
-option.ignorecase = true
-
-option.termguicolors = true
-
-option.signcolumn = "yes"
-
-option.updatetime = 50
-option.autoread = true
-option.exrc = true
+-- 防止包裹
 option.wrap = false
 
+-- 光标行
+option.cursorline = true
 
--- Buffer Settings --
-buffer.fileenconding = "utf-8"
+-- 启动鼠标
+option.mouse:append("a")
 
--- Global Settings --
-global.mapleader = " "
+-- 启动系统剪贴板
 
--- Key Map --
--- v模式下按KJ能够快速换行
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
--- 全局粘贴？ 但是我现在弄不好
-vim.keymap.set({ "v", "n" }, "<leader>y", "\"+y")
+option.clipboard:append("unnamedplus")
+
+-- 搜索
+option.ignorecase = true
+option.smartcase = true
+
+-- 真颜色
+option.termguicolors = true
+option.signcolumn = "yes"
 
 

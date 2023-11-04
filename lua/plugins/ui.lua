@@ -1,16 +1,22 @@
 return {
-    {
-        'akinsho/bufferline.nvim',
-        config = function()
-            require("bufferline").setup({})
-        end
-        
+    "folke/tokyonight.nvim",
+    dependencies = {
+        "nvim-lualine/lualine.nvim",
+        "nvim-tree/nvim-web-devicons",
+        "utilyre/barbecue.nvim",
+        "SmiteshP/nvim-navic"
     },
-    {
-        'lukas-reineke/indent-blankline.nvim',
-        config = function()
-            require("ibl").setup()    
-        end
-        
-    }
+    config = function()
+        vim.cmd[[colorscheme tokyonight-storm]]
+        require("lualine").setup({
+            options = {
+                theme = "tokyonight"
+            }
+        })
+        require("barbecue").setup {
+            theme = "tokyonight-storm"
+        }
+    
+    end
+
 }
